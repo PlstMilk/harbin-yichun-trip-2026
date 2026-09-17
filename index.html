@@ -365,6 +365,9 @@ const DAYS = [
     { name: '嘉荫恐龙国家地质公园（备选）', lat: 48.9156, lng: 130.3569, type: 'spot', time: '—',
       desc: '恐龙化石博物馆+发掘遗址，1h；可挪到 D7 早场',
       detail: '神州第一龙发掘地。今天傍晚若累了就明早去。' },
+    { name: '备选：乌伊岭（松江源）湿地晨雾', lat: 48.5500, lng: 129.4200, type: 'spot', time: '—',
+      desc: 'D6 清晨 6:00-8:00，汤旺县出发 40min；芦苇+五花山倒影',
+      detail: '晴天有雾才值，天气平平就跳过，直接执行原行程（茅兰沟 10:30 进场）。', xhsKeyword: '乌伊岭湿地' },
   ]},
 
   { id: 7, label: 'D7 10.5', date: '10月5日 周一 · 265km / 4h · 车程最长日', title: '嘉荫 → 金山鹿苑', color: '#ff9f0a', locations: [
@@ -382,27 +385,30 @@ const DAYS = [
       desc: '小镇住宿条件一般，图的是离鹿苑近、明早好赶路' },
   ]},
 
-  { id: 8, label: 'D8 10.6', date: '10月6日 周二 · 300km / 4h', title: '返回哈尔滨 · 伏尔加庄园', color: '#5856d6', locations: [
-    { name: '出发 · 金山屯→哈尔滨', lat: 47.3698, lng: 129.2867, type: 'transport', time: '08:00',
-      desc: '300km / 4h，上午出发避开下午返程高峰',
-      detail: 'G1111 鹤哈高速直达，10/6 下午-10/7 是返程最高峰。' },
-    { name: '老厨家（香坊道台食府）', lat: 45.7246, lng: 126.6712, type: 'food', time: '12:00',
-      desc: '锅包肉创始店（1907 年，省级非遗）', budget: '人均¥50',
-      detail: '文政街118号。本地人来这家，基本不排队；中央大街店饭点排队1h+。\n只奔锅包肉（48-58元/份），其他菜评价一般。\n东北菜分量大，4人点3-4道菜足够。',
-      dianpingKeyword: '老厨家 文政街', pay: { wechat: 1, alipay: 1 } },
-    { name: '伏尔加庄园', lat: 45.6407, lng: 126.8481, type: 'spot', time: '14:00',
-      desc: '俄式建筑群+秋色草坪湖泊，拍照 3h', budget: '约¥100',
-      detail: '市区东南 30km。复建的圣尼古拉教堂是标志。\n下午顺光，建筑+白桦秋色很出片。', xhsKeyword: '伏尔加庄园' },
+  { id: 8, label: 'D8 10.6', date: '10月6日 周二 · 约510km · 乌带公路穿林回哈尔滨', title: '乌带公路 → 哈尔滨', color: '#5856d6', locations: [
+    { name: '出发 · 金山屯→带岭', lat: 47.0200, lng: 129.0500, type: 'transport', time: '08:00',
+      desc: '约80km / 1h，先到乌带公路南端入口',
+      detail: '今天不走 G1111 直达，改走乌带公路穿林——用路上风景替代伏尔加庄园。' },
+    { name: '乌带公路（带岭→乌马河段）', lat: 47.3500, lng: 128.8800, type: 'spot', time: '09:00',
+      desc: '约100km 林间景观公路，五花山公路大片，边走边停 2h', budget: '免费',
+      detail: '小兴安岭最美林间公路之一，弯道多限速低，慢开。\n看到好看的林段随时停车。', xhsKeyword: '乌带公路' },
+    { name: '午餐 · 伊春市区', lat: 47.7277, lng: 128.8412, type: 'food', time: '11:30',
+      desc: '乌马河出来就近简餐', budget: '人均¥40' },
+    { name: '出发 · 伊春→哈尔滨（G1111）', lat: 47.7277, lng: 128.8412, type: 'transport', time: '12:30',
+      desc: '约330km / 3.5-4h，赶在下午返程高峰前进城',
+      detail: '10/6 下午车流量渐增，服务区少停留。' },
+    { name: '宿 · 中央大街附近', lat: 45.7690, lng: 126.6180, type: 'hotel', time: '16:30',
+      desc: '放下行李休息，晚上老道外' },
     { name: '张包铺（老道外）', lat: 45.7762, lng: 126.6498, type: 'food', time: '18:00',
       desc: '排骨包子 10元/屉，百年老店', budget: '人均¥30',
-      detail: '配北三凯奇糕点当伴手礼。老道外才是哈尔滨本地烟火气。',
+      detail: '配北三凯奇糕点当伴手礼。\n想吃锅包肉可改老厨家中央大街店（饭点排队1h+，建议17:00前到）。',
       pay: { wechat: 1, alipay: 1 } },
     { name: '中华巴洛克街区', lat: 45.7766, lng: 126.6505, type: 'spot', time: '19:00',
       desc: '老道外百年中西合璧建筑群，夜景有味道', budget: '免费', xhsKeyword: '中华巴洛克' },
-    { name: '宿 · 中央大街附近', lat: 45.7690, lng: 126.6180, type: 'hotel', time: '21:00',
-      desc: '最后一晚，晚上可补拍圣索菲亚夜景' },
-    { name: '东北虎林园（备选）', lat: 45.8086, lng: 126.5940, type: 'spot', time: '—',
-      desc: '若伏尔加庄园不想去，可替换；或 D9 早场' },
+    { name: '圣索菲亚夜景补拍', lat: 45.7679, lng: 126.6215, type: 'spot', time: '20:30',
+      desc: '回酒店顺路补拍' },
+    { name: '备选：雨天退回 G1111 直达', lat: 47.3698, lng: 129.2867, type: 'transport', time: '—',
+      desc: '乌带公路遇雨/大雾就原路高速（300km/4h），下午富余可临时加回伏尔加庄园' },
   ]},
 
   { id: 9, label: 'D9 10.7', date: '10月7日 周三 · 建议订15:00后航班', title: '买红肠 · 返程武汉', color: '#8e8e93', locations: [
@@ -421,6 +427,11 @@ const DAYS = [
       detail: '10/7 是返程最高峰，机场留足 2h。' },
     { name: '太阳岛风景区（备选）', lat: 45.7930, lng: 126.6080, type: 'spot', time: '—',
       desc: '航班若订得晚，上午可加太阳岛（秋季免大门票）' },
+    { name: '备选：老厨家（锅包肉）', lat: 45.7246, lng: 126.6712, type: 'food', time: '—',
+      desc: '1907 年锅包肉创始店；推荐香坊道台食府店（文政街118号）不排队',
+      budget: '人均¥50',
+      detail: 'D8 改走乌带公路后午饭店不顺路；若想念锅包肉，D9 上午压缩菜市场、11:00 前去香坊店，或 D8 晚餐改中央大街店（排队1h+）。',
+      dianpingKeyword: '老厨家 文政街', pay: { wechat: 1, alipay: 1 } },
   ]},
 ];
 
@@ -434,7 +445,7 @@ function overviewContent() {
 <div class="info-grid">
   <div class="info-card"><div class="label">大交通</div><div class="value">武汉✈哈尔滨 9.29 14:30落地<br>10.7 返程（建议15:00后）</div></div>
   <div class="info-card"><div class="label">租车</div><div class="value">SUV 9天 机场取还<br>¥4500–6500（国庆价）</div></div>
-  <div class="info-card"><div class="label">环线里程</div><div class="value">约 1800km<br>哈尔滨→五大连池→伊春→嘉荫→金山屯→哈尔滨</div></div>
+  <div class="info-card"><div class="label">环线里程</div><div class="value">约 2000km<br>哈尔滨→五大连池→伊春→五营→汤旺河→嘉荫→金山屯→乌带公路→哈尔滨</div></div>
   <div class="info-card"><div class="label">预估费用</div><div class="value">人均 ¥3500–4500（4人）</div></div>
   <div class="info-card"><div class="label">五花山预报（2026官方）</div><div class="value">北部林区 9.20–10.6<br>中部林区 9.25–10.10<br>南部林区 10.1–10.15</div></div>
   <div class="info-card"><div class="label">住宿 8 晚</div><div class="value">哈尔滨3 · 五大连池1 · 伊春1 · 汤旺县2 · 嘉荫1 · 金山屯0.5+0.5</div></div>
@@ -461,9 +472,40 @@ function overviewContent() {
 // ║  ENGINE — Do not modify below unless customizing behavior   ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const map = L.map('map', { center: [HOTEL.lat || 35.69, HOTEL.lng || 139.74], zoom: 12, zoomControl: false, attributionControl: true });
+/* ── WGS84 → GCJ-02（高德坐标系）：模板数据均为 WGS84，叠加高德瓦片前必须转换 ── */
+const GCJ_A = 6378245.0, GCJ_EE = 0.00669342162296594323;
+function _tLat(x, y) {
+  let r = -100.0 + 2.0*x + 3.0*y + 0.2*y*y + 0.1*x*y + 0.2*Math.sqrt(Math.abs(x));
+  r += (20.0*Math.sin(6.0*x*Math.PI) + 20.0*Math.sin(2.0*x*Math.PI)) * 2.0/3.0;
+  r += (20.0*Math.sin(y*Math.PI) + 40.0*Math.sin(y/3.0*Math.PI)) * 2.0/3.0;
+  r += (160.0*Math.sin(y/12.0*Math.PI) + 320*Math.sin(y*Math.PI/30.0)) * 2.0/3.0;
+  return r;
+}
+function _tLng(x, y) {
+  let r = 300.0 + x + 2.0*y + 0.1*x*x + 0.1*x*y + 0.1*Math.sqrt(Math.abs(x));
+  r += (20.0*Math.sin(6.0*x*Math.PI) + 20.0*Math.sin(2.0*x*Math.PI)) * 2.0/3.0;
+  r += (20.0*Math.sin(x*Math.PI) + 40.0*Math.sin(x/3.0*Math.PI)) * 2.0/3.0;
+  r += (150.0*Math.sin(x/12.0*Math.PI) + 300.0*Math.sin(x/30.0*Math.PI)) * 2.0/3.0;
+  return r;
+}
+function _outOfChina(lat, lng) { return lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271; }
+function G(lat, lng) {
+  if (_outOfChina(lat, lng)) return [lat, lng];
+  let dLat = _tLat(lng - 105.0, lat - 35.0);
+  let dLng = _tLng(lng - 105.0, lat - 35.0);
+  const radLat = lat / 180.0 * Math.PI;
+  let magic = Math.sin(radLat); magic = 1 - GCJ_EE * magic * magic;
+  const sqrtMagic = Math.sqrt(magic);
+  dLat = (dLat * 180.0) / ((GCJ_A * (1 - GCJ_EE)) / (magic * sqrtMagic) * Math.PI);
+  dLng = (dLng * 180.0) / (GCJ_A / sqrtMagic * Math.cos(radLat) * Math.PI);
+  return [lat + dLat, lng + dLng];
+}
+
+const AMAP_KEY = 'ed28d2b62f0b66780780a0a04a645772'; // 高德 Web Key（瓦片免Key；备用：升级POI搜索/路径规划时用）
+
+const map = L.map('map', { center: HOTEL.lat ? G(HOTEL.lat, HOTEL.lng) : [35.69, 139.74], zoom: 12, zoomControl: false, attributionControl: true });
 L.control.zoom({ position: 'topright' }).addTo(map);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(map);
+L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', { subdomains: ['1','2','3','4'], maxZoom: 18, attribution: '© 高德地图' }).addTo(map);
 
 /* ── Geolocation ── */
 const LocateControl = L.Control.extend({
@@ -485,13 +527,14 @@ new LocateControl().addTo(map);
 let locMarker, locCircle;
 map.on('locationfound', e => {
   const r = e.accuracy / 2;
-  if (locMarker) { locMarker.setLatLng(e.latlng); locCircle.setLatLng(e.latlng).setRadius(r); }
+  const p = L.latLng(G(e.latitude, e.longitude)); // 浏览器定位是 WGS84，转 GCJ-02 对齐高德瓦片
+  if (locMarker) { locMarker.setLatLng(p); locCircle.setLatLng(p).setRadius(r); }
   else {
-    locMarker = L.marker(e.latlng, {
+    locMarker = L.marker(p, {
       icon: L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#007aff;border:2.5px solid #fff;box-shadow:0 0 6px rgba(0,122,255,.5)"></div><div class="loc-pulse" style="position:absolute;top:0;left:0"></div>', iconSize:[14,14], iconAnchor:[7,7] }),
       zIndexOffset: 2000
     }).addTo(map);
-    locCircle = L.circle(e.latlng, { radius: r, color: '#007aff', fillColor: '#007aff', fillOpacity: .08, weight: 1 }).addTo(map);
+    locCircle = L.circle(p, { radius: r, color: '#007aff', fillColor: '#007aff', fillOpacity: .08, weight: 1 }).addTo(map);
   }
 });
 map.on('locationerror', () => {});
@@ -500,7 +543,7 @@ function icon(color, emoji) {
   return L.divIcon({ className: '', html: `<div style="width:28px;height:28px;border-radius:50%;background:${color};border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.18)">${emoji||''}</div>`, iconSize: [28,28], iconAnchor: [14,14], popupAnchor: [0,-16] });
 }
 
-if (HOTEL.lat) L.marker([HOTEL.lat, HOTEL.lng], { icon: icon('#ff9500','🏨'), zIndexOffset: 1000 }).addTo(map).bindPopup(`<b>${HOTEL.name}</b>`);
+if (HOTEL.lat) L.marker(G(HOTEL.lat, HOTEL.lng), { icon: icon('#ff9500','🏨'), zIndexOffset: 1000 }).addTo(map).bindPopup(`<b>${HOTEL.name}</b>`);
 
 let markers = [], polylines = [];
 const emojis = { food:'🍽️', spot:'📍', hotel:'🏨', transport:'🚗', drink:'🍺' };
@@ -511,11 +554,11 @@ function showDay(idx) {
   clearMap();
   if (idx === 0) {
     const pts = [];
-    DAYS.forEach(d => d.locations.forEach(l => { if(l.lat) pts.push([l.lat,l.lng]); }));
+    DAYS.forEach(d => d.locations.forEach(l => { if(l.lat) pts.push(G(l.lat,l.lng)); }));
     if(pts.length) map.fitBounds(pts, {padding:[30,30]});
     DAYS.slice(1).forEach(d => {
       d.locations.filter(l=>l.time!=='—').forEach(l => {
-        const m = L.circleMarker([l.lat,l.lng], { radius:4, fillColor:d.color, color:'#fff', weight:1.5, fillOpacity:.9 }).addTo(map).bindPopup(`<b>${l.name}</b><br><span style="color:#86868b">${d.label}</span>`);
+        const m = L.circleMarker(G(l.lat,l.lng), { radius:4, fillColor:d.color, color:'#fff', weight:1.5, fillOpacity:.9 }).addTo(map).bindPopup(`<b>${l.name}</b><br><span style="color:#86868b">${d.label}</span>`);
         markers.push(m);
       });
     });
@@ -526,11 +569,11 @@ function showDay(idx) {
   const coords = [];
   day.locations.forEach(l => {
     if(!l.lat) return;
-    const m = L.marker([l.lat,l.lng], { icon: icon(day.color, emojis[l.type]||'📌') }).addTo(map);
+    const m = L.marker(G(l.lat,l.lng), { icon: icon(day.color, emojis[l.type]||'📌') }).addTo(map);
     const gmapQ = l.gmap||encodeURIComponent(l.name);
     m.bindPopup(`<b>${l.name}</b>${l.time!=='—'?'<br><span style="color:#86868b">'+l.time+'</span>':''}<br>${l.desc}${l.budget?'<br><span style="color:#ff9500">'+l.budget+'</span>':''}<br><a href="#" onclick="event.preventDefault();openAS('${l.name.replace(/'/g,"\\'")}',${l.lat},${l.lng},'${gmapQ}')">📍 导航</a>${l.xhs?' · <a href="'+l.xhs+'" target="_blank">📕 小红书</a>':''}`);
     markers.push(m);
-    if(l.time!=='—') coords.push([l.lat,l.lng]);
+    if(l.time!=='—') coords.push(G(l.lat,l.lng));
   });
   if(coords.length>1) { const pl = L.polyline(coords, { color:day.color, weight:2.5, opacity:.5, dashArray:'6,5' }).addTo(map); polylines.push(pl); }
   if(coords.length) map.fitBounds(coords, { padding:[40,40], maxZoom:14 });
@@ -658,7 +701,7 @@ asOverlay.addEventListener('click', e => { if (e.target === asOverlay) closeAS()
 const IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 function amapAppUrl(name, lat, lng) {
   const scheme = IS_IOS ? 'iosamap' : 'androidamap';
-  return `${scheme}://viewMap?sourceApplication=trip&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lng}&dev=0`;
+  return `${scheme}://viewMap?sourceApplication=trip&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lng}&dev=1`; // dev=1：传入的是原始 WGS84 坐标
 }
 function amapWebUrl(name, lat, lng) {
   return `https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(name)}&src=trip&coordinate=wgs84&callnative=1`;
